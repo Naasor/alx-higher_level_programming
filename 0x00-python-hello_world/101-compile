@@ -2,4 +2,4 @@
 echo "Compiling $PYFILE ..."
 python3 -c "import py_compile
 output = \"$PYFILE\" + \"C\"
-py_compile(\"$PYFILE", output)"
+py_compile.compile(\"$PYFILE", output)"
