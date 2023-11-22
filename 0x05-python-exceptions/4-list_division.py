@@ -2,11 +2,10 @@
 
 def list_division(my_list_1, my_list_2, list_length):
     NewList = []
-    count = 0
-    for a in range(list_length):
+    for a in range(0, list_length):
         try:
             count = my_list_1[a] / my_list_2[a]
-        except(ValueError, TypeError):
+        except TypeError:
             print("wrong type")
             count = 0
         except ZeroDivisionError:
