@@ -37,7 +37,7 @@ def model_state_my_get():
             break
 
     if found is False:
-            print("Not found")
+        print("Not found")
 
     session.close()
 
