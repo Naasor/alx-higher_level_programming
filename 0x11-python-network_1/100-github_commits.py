@@ -8,7 +8,7 @@ from sys import argv
 
 
 def github_commit():
-    r = requests.get('https://developer.github.com/v3/repos/{}/{}/commits'
+    r = requests.get('https://api.github.com/repos/{}/{}/commits'
                      .format(argv[2], argv[1]))
     commits = r.json()
     for commit in commits[:10]:
