@@ -8,10 +8,10 @@ from sys import argv
 
 
 def json_api():
-        try:
-            q = argv[1]
-        except:
-            q = ''
+    try:
+        q = argv[1]
+    except Exception:
+        q = ''
         url = 'http://0.0.0.0:5000/search_user'
         payload = {'q': q}
         r = requests.post(url, payload)
@@ -23,7 +23,7 @@ def json_api():
                 json_id = json.get('id')
                 json_name = json.get('name')
                 print('[{}] {}'.format(json_id, json_name))
-        except:
+        except Exception:
             print('Not a valid JSON')
 
 
