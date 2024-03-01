@@ -10,7 +10,7 @@ from sys import argv
 def json_api():
     try:
         q = argv[1]
-    except Exception:
+        except Exception:
         q = ''
         url = 'http://0.0.0.0:5000/search_user'
         payload = {'q': q}
