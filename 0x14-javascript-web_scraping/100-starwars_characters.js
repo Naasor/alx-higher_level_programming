@@ -20,4 +20,4 @@ req.get(url, (error, res, body) => {
     });
   }
   }
-});
+})
