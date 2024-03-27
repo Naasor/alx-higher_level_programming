@@ -1,8 +1,14 @@
 #!/usr/bin/node
-const request = require('request')
-const epId = process.argv[2]
-const apiUrl = `http://swapi.co/api/films/${epId}`
-request.get(apiUrl, (error, response, body) => {
-  if (error) console.log(error)
-  console.log(JSON.parse(body).title)
-})
+// Star Wars
+
+const request = require('request');
+const url = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2];
+
+request.get(url, (error, response, body) => {
+  if (error) {
+    console.log(error);
+  } else {
+    const content = JSON.parse(body);
+    console.log(content.title);
+  }
+});
